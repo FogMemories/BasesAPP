@@ -1,0 +1,9 @@
+
+DELIMITER $$
+USE `bases1`$$
+CREATE PROCEDURE `pls_trabajos`(in salario_ms double)
+BEGIN
+SELECT * FROM bases1.cttrabajos WHERE  cttrabajos.salario_minimo >salario_ms;
+END$$
+
+DELIMITER ;
